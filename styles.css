@@ -1,0 +1,113 @@
+/* Basic Reset */
+:root{
+  --accent1:#D44C2E;
+  --accent2:#54C1AC;
+  --bg:#000000;
+  --card:#0f0f10;
+  --muted:#bdbdbd;
+  --maxWidth:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Calibri, Arial, sans-serif;background:var(--bg);color:#fff}
+.milker{font-family:"Milker", Calibri, sans-serif}
+.container{max-width:var(--maxWidth);margin:0 auto;padding:1rem}
+.header{border-bottom:1px solid rgba(255,255,255,0.04);position:sticky;top:0;background:linear-gradient(180deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));z-index:40}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the logo and the text */
+}
+
+.logo-image {
+  height: 50px; /* adjust as needed */
+  width: auto;
+}
+
+.logo-mark{width:44px;height:44px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;border-radius:8px;font-weight:700}
+
+.logo-text{font-weight:70px;
+
+}
+
+.nav{display:flex;gap:1rem;align-items:center}
+.nav-link{color:#fff;text-decoration:none;opacity:0.9}
+.btn{padding:0.6rem 1rem;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+.btn-block{display:block}
+.btn-primary{background:var(--accent1);color:#fff}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#fff}
+.btn-ghost{background:transparent;border:0;color:#fff}
+.nav-toggle{display:none;background:transparent;border:0;color:inherit;font-size:1.2rem}
+
+/* HERO */
+.hero{padding:3.5rem 0;background:linear-gradient(180deg,#000,#070707);}
+.hero-inner{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:center}
+.hero-copy h1{font-size:2.4rem;color:var(--accent2);margin:0 0 0.6rem}
+.lead{color:#c9c9c9}
+.hero-ctas{margin-top:1rem;display:flex;gap:0.75rem}
+.phone-mock{width:320px;max-width:100%;border-radius:28px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.04)}
+.phone-mock img{width:100%;display:block}
+
+/* Tickets */
+.section{padding:3rem 0}
+.section-title{font-size:1.8rem;color:var(--accent1);margin-bottom:0.4rem}
+.section-sub{color:var(--muted);margin-bottom:1.2rem}
+.ticket-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:var(--card);padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.ticket-card h3{margin:0;color:var(--accent2)}
+.price{font-size:1.4rem;font-weight:700;margin:0.8rem 0}
+.note{color:var(--muted);font-size:0.9rem;margin-top:0.8rem}
+
+/* Artists */
+.artist-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.artist-card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.artist-info{padding:0.6rem}
+.artist-links a{color:var(--muted);margin-right:0.6rem;text-decoration:none}
+
+/* Gallery grid */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.6rem}
+.gallery-grid img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+
+/* Contact */
+.contact-inner{display:grid;grid-template-columns:1fr 420px;gap:2rem}
+.contact-list{list-style:none;padding:0;margin:0}
+.contact-list li{margin:0.4rem 0}
+.contact-form input, .contact-form textarea, .newsletter-form input, .auth-form input{width:100%;padding:0.65rem;border-radius:8px;background:#0b0b0b;border:1px solid rgba(255,255,255,0.04);color:#fff;margin-bottom:0.6rem}
+.contact-form button{width:100%}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:none;align-items:center;justify-content:center;padding:1rem}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{background:#080808;padding:1.2rem;border-radius:12px;max-width:420px;width:100%;position:relative}
+.modal-close{position:absolute;right:10px;top:10px;border:0;background:transparent;color:#fff;font-size:1.4rem}
+.hidden{display:none}
+.auth-actions{display:flex;gap:0.6rem}
+
+/* Footer */
+.footer{border-top:1px solid rgba(255,255,255,0.03);padding:1rem 0;margin-top:2rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-links a{color:var(--muted);margin-left:0.6rem}
+
+/* Responsive tweaks */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .contact-inner{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid img{height:130px}
+  .about-grid{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .nav{display:none}
+  .nav-toggle{display:block}
+  .hero-copy h1{font-size:1.7rem}
+  .artist-card img{height:140px}
+}
+
+/* small screens */
+@media (max-width:420px){
+  .gallery-grid{grid-template-columns:1fr}
+}

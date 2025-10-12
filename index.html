@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>House of Koma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Milker and Calibri fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Milker:wght@400;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="site">
+    <!-- Header / Nav -->
+    <header class="header">
+      <div class="container header-inner">
+        <div class="logo">
+ 	<img src="assets/images/house of koma logo.png" alt="House of Koma logo" class="logo-image" />
+          <div class="logo-text">HOUSE OF KOMA</div>
+        </div>
+
+        <nav class="nav" id="mainNav">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#tickets" class="nav-link">Tickets</a>
+          <a href="#lineup" class="nav-link">Line-up</a>
+          <a href="#gallery" class="nav-link">Gallery</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <button class="btn btn-ghost" id="loginBtn">Login</button>
+        </nav>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="milker">The Beat of the Night Lives Here</h1>
+          <p class="lead">Urban. Street. Nightlife. Join House of Koma for an electric night of music, lights, and rhythm.</p>
+          <div class="hero-ctas">
+            <a href="#tickets" class="btn btn-primary">Buy Tickets</a>
+            <a href="#lineup" class="btn btn-outline">See Line-up</a>
+          </div>
+        </div>
+        <div class="hero-phone">
+          <!-- phone mockup with placeholder image -->
+          <div class="phone-mock">
+            <img src="assets/phone-mock.jpg" alt="phone mockup" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tickets -->
+    <section id="tickets" class="section tickets">
+      <div class="container">
+        <h2 class="section-title milker">Tickets</h2>
+        <p class="section-sub">Choose your experience. Secure checkout & instant e-ticket.</p>
+
+        <div class="ticket-grid">
+          <div class="card ticket-card">
+            <h3 class="milker">EARLY BIRD</h3>
+            <p class="muted">General access.</p>
+            <div class="price">P80</div>
+            <button class="btn btn-primary btn-block" data-tier="Standard">Buy</button>
+          </div>
+
+	<div class="card ticket-card">
+            <h3 class="milker">STANDARD</h3>
+            <p class="muted">General access.</p>
+            <div class="price">P100</div>
+            <button class="btn btn-primary btn-block" data-tier="Standard">Buy</button>
+          </div>
+
+
+          <div class="card ticket-card">
+            <h3 class="milker">DOUBLE</h3>
+            <p class="muted">Admits 2.</p>
+            <div class="price">P180</div>
+            <button class="btn btn-primary btn-block" data-tier="VIP">Buy</button>
+          </div>
+
+          <div class="card ticket-card">
+            <h3 class="milker">AT THE GATE</h3>
+            <p class="muted">Fee payable at the entrance points.</p>
+            <div class="price">P120</div>
+            <button class="btn btn-primary btn-block" data-tier="VVIP">Buy</button>
+          </div>
+        </div>
+
+        <p class="note">*This demo uses front-end purchase flow (no payment gateway). Replace with Stripe/PayPal when ready.</p>
+      </div>
+    </section>
+
+    <!-- Line-up -->
+    <section id="lineup" class="section lineup">
+      <div class="container">
+        <h2 class="section-title milker">Line-up</h2>
+        <p class="section-sub">Featured DJs & Performers</p>
+
+        <div class="artist-grid">
+          <!-- example artist card -->
+          <div class="card artist-card">
+            <img src="assets/images/tonie bacari.jpg" alt="tonie bacari" />
+            <div class="artist-info">
+              <h3 class="milker">Tonie Bacari</h3>
+              <p class="muted">Electro House</p>
+              <div class="artist-links">
+                <a href="#">Mix</a>
+                <a href="#">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card artist-card">
+            <img src="assets/artist2.jpg" alt="Artist 2" />
+            <div class="artist-info">
+              <h3 class="milker">NiteRider</h3>
+              <p class="muted">Deep House</p>
+            </div>
+          </div>
+
+          <div class="card artist-card">
+            <img src="assets/artist3.jpg" alt="Artist 3" />
+            <div class="artist-info">
+              <h3 class="milker">StreetSoul</h3>
+              <p class="muted">Urban Beats</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <h2 class="section-title milker">Gallery</h2>
+        <p class="section-sub">Moments from House of Koma</p>
+        <div class="gallery-grid">
+          <img src="assets/gallery1.jpg" alt="gallery" />
+          <img src="assets/gallery2.jpg" alt="gallery" />
+          <img src="assets/gallery3.jpg" alt="gallery" />
+          <img src="assets/gallery4.jpg" alt="gallery" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section-title milker">About</h2>
+        <p class="section-sub">House of Koma is a space where sophistication meets sound, a curated house music experience designed for discerning ears and cultured souls an immersive House music event designed to celebrate the deep, rhythmic sounds of African-electronic culture, mainly house music and its sub-genres. This is an event for those who appreciate quality over hype, community over chaos, and timeless house music that moves the mind, body and soul
+
+This will be the first edition,  first of its kind in kweneng district and  we aim to grow into a recurring, community-driven experience, shining a spotlight on emerging talent, connecting like-minded music lovers and amplifying the House music scene nationwide
+
+“This is House music elevated.”
+</p>
+
+        <div class="about-grid">
+          <div>
+            <h3 class="milker">Our Vision</h3>
+            <p class="muted">To create Botswana’s most inspiring house music experience, a vibrant 
+gathering that unites people through rhythm, celebrates our cultural values, and redefines nightlife as clean, safe, and uplifting. We aspire to build a tradition where the energy of world-class house music blends seamlessly with the spirit of Botho, leaving a lasting mark on our community and the entertainment scene.</p>
+          </div>
+          <div>
+            <h3 class="milker">What to Expect</h3>
+            <ul class="muted">
+              <li>Top DJs & live performers</li>
+              <li>Immersive lighting and visuals</li>
+              <li>Safe, curated event spaces</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Newsletter -->
+    <section id="contact" class="section contact">
+      <div class="container contact-inner">
+        <div class="contact-left">
+          <h2 class="section-title milker">Contact & Follow</h2>
+          <p class="muted">Find our email, phone and social handles below or use the contact form to email us directly.</p>
+
+          <ul class="contact-list muted">
+            <li><strong>Email:</strong> komasmainhouse@gmail.com</li>
+            <li><strong>Whatsapp:</strong> +267 73701330</li>
+          </ul>
+
+          <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+	    <a href="#">Tik tok</a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <h3 class="milker">Send a message</h3>
+          <form id="contactForm" class="contact-form">
+            <input type="text" id="contactName" placeholder="Your name" required />
+            <input type="email" id="contactEmail" placeholder="Your email" required />
+            <textarea id="contactMessage" placeholder="Message" rows="5" required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+
+          <hr />
+
+          <h3 class="milker">Newsletter</h3>
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="Your email" required />
+            <button class="btn btn-outline" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Modal (front-end) -->
+    <div id="authModal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="closeAuth">×</button>
+        <h3 class="milker">Login to House of Koma</h3>
+        <form id="loginForm" class="auth-form">
+          <input type="email" id="loginEmail" placeholder="Email" required />
+          <input type="password" id="loginPassword" placeholder="Password" required />
+          <div class="auth-actions">
+            <button class="btn btn-primary" type="submit">Login</button>
+            <button type="button" class="btn btn-ghost" id="showSignup">Create account</button>
+          </div>
+        </form>
+
+        <form id="signupForm" class="auth-form hidden">
+          <input type="text" id="signupName" placeholder="Full name" required />
+          <input type="email" id="signupEmail" placeholder="Email" required />
+          <input type="password" id="signupPassword" placeholder="Password" required />
+          <div class="auth-actions">
+            <button class="btn btn-primary" type="submit">Sign up</button>
+            <button type="button" class="btn btn-ghost" id="showLogin">Already have an account</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> House of Koma</div>
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
