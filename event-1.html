@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>House Of Koma - Event Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-KNuY+Jr0CkO5P1r2H7I7Un/du5Q8jSsjrGm1q1F9b6e7dGJYx3pE8ixFzHdYrHtZqZc4PhM6V4m0rL2zY5YkHg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Milker:wght@400;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" />
+
+  <style>
+    /* Fix logo size */
+    .logo-image {
+      max-height: 60px;
+      width: auto;
+    }
+
+    /* Ensure all images are responsive */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Optional container width */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Event banner specific */
+    .event-banner {
+      max-height: 500px;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site">
+    <!-- Header / Nav -->
+
+    <header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="assets/images/house of koma logo.png" alt="House of Koma logo" class="logo-image" />
+      <div class="logo-text">HOUSE OF KOMA</div>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+
+   <nav class="nav" id="mainNav">
+   <a href="index.html" class="nav-link">Home</a>
+  <a href="#events" class="nav-link">Events</a>
+  <a href="#lineup" class="nav-link">Line-up</a>
+  <a href="#gallery" class="nav-link">Gallery</a>
+  <a href="#about" class="nav-link">About</a>
+   <a href="contact.html" class="nav-link">Contact</a>
+  <button class="btn btn-ghost" id="loginBtn">Login</button>
+  <div id="userMenu" class="user-menu" style="display:none;">
+    <img src="assets/icons/user.png" alt="User Icon" class="user-icon" id="userIcon">
+    <div class="user-dropdown" id="userDropdown">
+      <p id="userNameDisplay"></p>
+      <button id="openDashboard">Dashboard</button>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </div>
+</nav>
+
+  </div>
+</header>
+
+
+    <!-- Event Details Section -->
+    <section id="event-details" class="section">
+      <div class="container">
+        <h1 class="milker">House Of Koma</h1>
+        <img src="assets/images/event1.jpg" alt="House Of Koma Event Banner" class="event-banner" />
+        <p><strong>Date:</strong> December 29, 2025</p>
+        <p><strong>Venue:</strong> Adashe Garden Resort, Thamaga, Botswana</p>
+        <p>Join us for an unforgettable night of house music, immersive visuals, and rhythm that moves your soul. This is House music elevated.</p>
+      </div>
+    </section>
+
+    <!-- Line-up -->
+    <section id="lineup" class="section lineup">
+      <div class="container">
+        <h2 class="section-title milker">Line-up</h2>
+        <p class="section-sub">Featured DJs & Performers</p>
+
+        <div class="artist-grid">
+          <!-- example artist card -->
+          <div class="card artist-card">
+            <img src="assets/images/tonie bacari.jpg" alt="tonie bacari" />
+            <div class="artist-info">
+              <h3 class="milker">Tonie Bacari</h3>
+              <p class="muted">3Step, Afro House</p>
+              <div class="artist-links">
+                <a href="#">Mix</a>
+                <a href="#">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card artist-card">
+            <img src="assets/images/mac'afrika.jpg" alt="Mac'Afrika" />
+            <div class="artist-info">
+              <h3 class="milker">Mac'Afrika</h3>
+              <p class="muted">Afro Tech</p>
+		<div class="artist-links">
+                <a href="#">Mix</a>
+                <a href="#">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card artist-card">
+            <img src="assets/artist3.jpg" alt="Bentiq Soul" />
+            <div class="artist-info">
+              <h3 class="milker">Bentiq Soul</h3>
+              <p class="muted">3Step, Afro Tech</p>
+		<div class="artist-links">
+                <a href="#">Mix</a>
+                <a href="#">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+	   <div class="card artist-card">
+            <img src="assets/artist3.jpg" alt="Son of Simeon" />
+            <div class="artist-info">
+              <h3 class="milker">Son of Simeon</h3>
+              <p class="muted">Afro Tech</p>
+		<div class="artist-links">
+                <a href="#">Mix</a>
+                <a href="#">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+	  <div class="card artist-card">
+            <img src="assets/artist3.jpg" alt="Konka Djy" />
+            <div class="artist-info">
+              <h3 class="milker">Konka Djy</h3>
+              <p class="muted">Deep House</p>
+		<div class="artist-links">
+                <a href="#">Mix</a>
+                <a href="#">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tickets -->
+    <section id="tickets" class="section tickets">
+      <div class="container">
+        <h2 class="section-title milker">Tickets</h2>
+        <p class="section-sub">Choose your experience. Secure checkout & instant e-ticket.</p>
+
+        <div class="ticket-grid">
+          <div class="card ticket-card">
+            <h3 class="milker">EARLY BIRD</h3>
+            <p class="muted">General access.</p>
+            <div class="price">P80</div>
+            <button class="btn btn-primary btn-block" data-tier="Early Bird">Buy</button>
+          </div>
+
+	<div class="card ticket-card">
+            <h3 class="milker">STANDARD</h3>
+            <p class="muted">General access.</p>
+            <div class="price">P100</div>
+            <button class="btn btn-primary btn-block" data-tier="Standard">Buy</button>
+          </div>
+
+
+          <div class="card ticket-card">
+            <h3 class="milker">DOUBLE</h3>
+            <p class="muted">Admits 2.</p>
+            <div class="price">P180</div>
+            <button class="btn btn-primary btn-block" data-tier="Double Ticket">Buy</button>
+          </div>
+
+          <div class="card ticket-card">
+            <h3 class="milker">AT THE GATE</h3>
+            <p class="muted">Fee payable at venue entrance points.</p>
+            <div class="price">P120</div>
+          </div>
+        </div>
+
+        <p class="note">*This demo uses front-end purchase flow (no payment gateway). Replace with Stripe/PayPal when ready.</p>
+      </div>
+    </section>
+
+    <!-- Login Modal (front-end) -->
+    <div id="authModal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="closeAuth">×</button>
+        <h3 class="milker">Login to House of Koma</h3>
+        <form id="loginForm" class="auth-form">
+          <input type="email" id="loginEmail" placeholder="Email" required />
+          <input type="password" id="loginPassword" placeholder="Password" required />
+          <div class="auth-actions">
+            <button class="btn btn-primary" type="submit">Login</button>
+            <button type="button" class="btn btn-ghost" id="showSignup">Create account</button>
+          </div>
+        </form>
+
+        <form id="signupForm" class="auth-form hidden">
+  <input type="text" id="signupFirstName" placeholder="First name" required />
+  <input type="text" id="signupLastName" placeholder="Last name" required />
+  <input type="text" id="signupUsername" placeholder="Choose a username" required />
+  <input type="date" id="signupDob" placeholder="Date of birth" required />
+  <input type="tel" id="signupPhone" placeholder="Phone number (e.g. +267...)" required />
+  <input type="email" id="signupEmail" placeholder="Email" required />
+  <input type="password" id="signupPassword" placeholder="Password" required />
+  <input type="password" id="signupPasswordConfirm" placeholder="Confirm password" required />
+  <div class="auth-actions">
+    <button class="btn btn-primary" type="submit">Sign up</button>
+    <button type="button" class="btn btn-ghost" id="showLogin">Already have an account</button>
+  </div>
+</form>
+
+
+      </div>
+    </div>
+<!-- Dashboard Section (hidden by default) -->
+<!-- Dashboard Overlay (keeps rest of site visible) -->
+<div id="dashboardOverlay" class="dashboard-overlay" style="display:none;">
+  <div class="dashboard-content">
+    <button id="closeDashboard" class="close-dashboard">×</button>
+    <h2 class="milker">Welcome, <span id="dashUserName"></span></h2>
+    <p class="muted" id="dashUserEmail"></p>
+
+    <h3 class="section-sub milker">Your Tickets</h3>
+    <div class="ticket-grid" id="dashTicketGrid"></div>
+
+    <h3 class="section-sub milker">Upcoming Events</h3>
+    <div class="events-grid" id="dashEventsGrid"></div>
+  </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> House of Koma</div>
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Load Supabase library FIRST -->
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+<!-- Then load your own JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>

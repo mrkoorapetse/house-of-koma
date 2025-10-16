@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>House of Koma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-KNuY+Jr0CkO5P1r2H7I7Un/du5Q8jSsjrGm1q1F9b6e7dGJYx3pE8ixFzHdYrHtZqZc4PhM6V4m0rL2zY5YkHg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+  <!-- Milker and Calibri fallback -->
+  <link href="https://fonts.googleapis.com/css2?family=Milker:wght@400;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+<div class="site">
+
+ <!-- Header / Nav -->
+      <header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="assets/images/house of koma logo.png" alt="House of Koma logo" class="logo-image" />
+      <div class="logo-text">HOUSE OF KOMA</div>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+
+   <nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="#events" class="nav-link">Events</a>
+  <a href="#gallery" class="nav-link">Gallery</a>
+  <a href="#about" class="nav-link">About</a>
+  <a href="#contact" class="nav-link">Contact</a>
+  <button class="btn btn-ghost" id="loginBtn">Login</button>
+  <div id="userMenu" class="user-menu" style="display:none;">
+    <img src="assets/icons/user.png" alt="User Icon" class="user-icon" id="userIcon">
+    <div class="user-dropdown" id="userDropdown">
+      <p id="userNameDisplay"></p>
+      <button id="openDashboard">Dashboard</button>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </div>
+</nav>
+
+  </div>
+</header>
+
+<!-- Contact / Newsletter -->
+    <section id="contact" class="section contact">
+      <div class="container contact-inner">
+        <div class="contact-left">
+          <h2 class="section-title milker">Contact & Follow</h2>
+          <p class="muted">Find our email, phone and social handles below or use the contact form to email us directly.</p>
+
+        <ul class="contact-list muted">
+  <li>
+    <img src="assets/icons/email.png" alt="Email icon" class="icon" />
+    <a href="mailto:komasmainhouse@gmail.com">komasmainhouse@gmail.com</a>
+  </li>
+  <li>
+    <img src="assets/icons/whatsapp.png" alt="WhatsApp icon" class="icon" />
+    <a href="https://wa.me/26773701330" target="_blank">+267 73701330</a>
+  </li>
+</ul>
+
+<div class="socials">
+  <a href="#" aria-label="Instagram">
+    <img src="assets/icons/instagram.png" alt="Instagram icon" class="icon" />
+  </a>
+  <a href="#" aria-label="Facebook">
+    <img src="assets/icons/facebook.png" alt="Facebook icon" class="icon" />
+  </a>
+  <a href="#" aria-label="Twitter">
+    <img src="assets/icons/twitter.png" alt="Twitter icon" class="icon" />
+  </a>
+  <a href="#" aria-label="TikTok">
+    <img src="assets/icons/tiktok.png" alt="TikTok icon" class="icon" />
+  </a>
+</div>
+        </div>
+
+        <div class="contact-right">
+          <h3 class="milker">Send a message</h3>
+          <form id="contactForm" class="contact-form">
+            <input type="text" id="contactName" placeholder="Your name" required />
+            <input type="email" id="contactEmail" placeholder="Your email" required />
+            <textarea id="contactMessage" placeholder="Message" rows="5" required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+
+          <hr />
+
+          <h3 class="milker">Newsletter</h3>
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="Your email" required />
+            <button class="btn btn-outline" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+<!-- Login Modal (front-end) -->
+    <div id="authModal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="closeAuth">×</button>
+        <h3 class="milker">Login to House of Koma</h3>
+        <form id="loginForm" class="auth-form">
+          <input type="email" id="loginEmail" placeholder="Email" required />
+          <input type="password" id="loginPassword" placeholder="Password" required />
+          <div class="auth-actions">
+            <button class="btn btn-primary" type="submit">Login</button>
+            <button type="button" class="btn btn-ghost" id="showSignup">Create account</button>
+          </div>
+        </form>
+
+        <form id="signupForm" class="auth-form hidden">
+  <input type="text" id="signupFirstName" placeholder="First name" required />
+  <input type="text" id="signupLastName" placeholder="Last name" required />
+  <input type="text" id="signupUsername" placeholder="Choose a username" required />
+  <input type="date" id="signupDob" placeholder="Date of birth" required />
+  <input type="tel" id="signupPhone" placeholder="Phone number (e.g. +267...)" required />
+  <input type="email" id="signupEmail" placeholder="Email" required />
+  <input type="password" id="signupPassword" placeholder="Password" required />
+  <input type="password" id="signupPasswordConfirm" placeholder="Confirm password" required />
+  <div class="auth-actions">
+    <button class="btn btn-primary" type="submit">Sign up</button>
+    <button type="button" class="btn btn-ghost" id="showLogin">Already have an account</button>
+  </div>
+</form>
+
+
+      </div>
+    </div>
+<!-- Dashboard Section (hidden by default) -->
+<!-- Dashboard Overlay (keeps rest of site visible) -->
+<div id="dashboardOverlay" class="dashboard-overlay" style="display:none;">
+  <div class="dashboard-content">
+    <button id="closeDashboard" class="close-dashboard">×</button>
+    <h2 class="milker">Welcome, <span id="dashUserName"></span></h2>
+    <p class="muted" id="dashUserEmail"></p>
+
+    <h3 class="section-sub milker">Your Tickets</h3>
+    <div class="ticket-grid" id="dashTicketGrid"></div>
+
+    <h3 class="section-sub milker">Upcoming Events</h3>
+    <div class="events-grid" id="dashEventsGrid"></div>
+  </div>
+</div>
+
+ <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> House of Koma</div>
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+    </footer>
+
+    </div>
+
+<!-- Load Supabase library FIRST -->
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+<!-- Then load your own JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

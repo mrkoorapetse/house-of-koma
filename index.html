@@ -6,33 +6,83 @@
   <title>House of Koma</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-KNuY+Jr0CkO5P1r2H7I7Un/du5Q8jSsjrGm1q1F9b6e7dGJYx3pE8ixFzHdYrHtZqZc4PhM6V4m0rL2zY5YkHg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
   <!-- Milker and Calibri fallback -->
   <link href="https://fonts.googleapis.com/css2?family=Milker:wght@400;700&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet" />
 </head>
+
+
 <body>
+  
   <div class="site">
     <!-- Header / Nav -->
-    <header class="header">
-      <div class="container header-inner">
-        <div class="logo">
- 	<img src="assets/images/house of koma logo.png" alt="House of Koma logo" class="logo-image" />
-          <div class="logo-text">HOUSE OF KOMA</div>
-        </div>
+      <header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="assets/images/house of koma logo.png" alt="House of Koma logo" class="logo-image" />
+      <div class="logo-text">HOUSE OF KOMA</div>
+    </div>
 
-        <nav class="nav" id="mainNav">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#tickets" class="nav-link">Tickets</a>
-          <a href="#lineup" class="nav-link">Line-up</a>
-          <a href="#gallery" class="nav-link">Gallery</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#contact" class="nav-link">Contact</a>
-          <button class="btn btn-ghost" id="loginBtn">Login</button>
-        </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
 
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
-      </div>
-    </header>
+   <nav class="nav" id="mainNav">
+  <a href="#home" class="nav-link">Home</a>
+  <a href="#events" class="nav-link">Events</a>
+  <a href="#gallery" class="nav-link">Gallery</a>
+  <a href="#about" class="nav-link">About</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <button class="btn btn-ghost" id="loginBtn">Login</button>
+  <div id="userMenu" class="user-menu" style="display:none;">
+    <img src="assets/icons/user.png" alt="User Icon" class="user-icon" id="userIcon">
+    <div class="user-dropdown" id="userDropdown">
+      <p id="userNameDisplay"></p>
+      <button id="openDashboard">Dashboard</button>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </div>
+</nav>
+
+  </div>
+</header>
+
+<!-- Slideshow Section -->
+<section class="slideshow">
+  <div class="slides fade">
+    <img src="assets/images/are you a house music lover.jpg" alt="are you a house music lover" />
+  </div>
+  <div class="slides fade">
+    <img src="assets/images/lets be friends.jpg" alt="lets be friends" />
+  </div>
+  <div class="slides fade">
+    <img src="assets/images/be part of the movement.jpg" alt="be part of the movement" />
+  </div>
+  <div class="slides fade">
+    <img src="assets/images/house of koma do you listen to.jpg" alt="house of koma do you listen to" />
+  </div>
+
+
+  <!-- Navigation arrows -->
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+
+  <!-- Dots -->
+  <div class="dots-container">
+ 	 <span class="dot"></span>
+ 	 <span class="dot"></span>
+ 	 <span class="dot"></span>
+ 	 <span class="dot"></span>
+</div>
+
+</section>
+
 
     <!-- Hero -->
     <section id="home" class="hero">
@@ -41,100 +91,42 @@
           <h1 class="milker">The Beat of the Night Lives Here</h1>
           <p class="lead">Urban. Street. Nightlife. Join House of Koma for an electric night of music, lights, and rhythm.</p>
           <div class="hero-ctas">
-            <a href="#tickets" class="btn btn-primary">Buy Tickets</a>
-            <a href="#lineup" class="btn btn-outline">See Line-up</a>
+            <a href="#events" class="btn btn-primary">See Events</a>
           </div>
         </div>
-        <div class="hero-phone">
-          <!-- phone mockup with placeholder image -->
-          <div class="phone-mock">
-            <img src="assets/phone-mock.jpg" alt="phone mockup" />
-          </div>
-        </div>
-      </div>
+             </div>
     </section>
 
-    <!-- Tickets -->
-    <section id="tickets" class="section tickets">
-      <div class="container">
-        <h2 class="section-title milker">Tickets</h2>
-        <p class="section-sub">Choose your experience. Secure checkout & instant e-ticket.</p>
-
-        <div class="ticket-grid">
-          <div class="card ticket-card">
-            <h3 class="milker">EARLY BIRD</h3>
-            <p class="muted">General access.</p>
-            <div class="price">P80</div>
-            <button class="btn btn-primary btn-block" data-tier="Standard">Buy</button>
-          </div>
-
-	<div class="card ticket-card">
-            <h3 class="milker">STANDARD</h3>
-            <p class="muted">General access.</p>
-            <div class="price">P100</div>
-            <button class="btn btn-primary btn-block" data-tier="Standard">Buy</button>
-          </div>
-
-
-          <div class="card ticket-card">
-            <h3 class="milker">DOUBLE</h3>
-            <p class="muted">Admits 2.</p>
-            <div class="price">P180</div>
-            <button class="btn btn-primary btn-block" data-tier="VIP">Buy</button>
-          </div>
-
-          <div class="card ticket-card">
-            <h3 class="milker">AT THE GATE</h3>
-            <p class="muted">Fee payable at the entrance points.</p>
-            <div class="price">P120</div>
-            <button class="btn btn-primary btn-block" data-tier="VVIP">Buy</button>
-          </div>
+    <!-- Events -->
+<section id="events" class="section events">
+  <div class="container">
+    <h2 class="section-title milker">Upcoming Events</h2>
+    <div class="events-grid">
+      
+      <!-- Event 1 -->
+      <a href="event-1.html" class="card event-card">
+        <img src="assets/images/event1.jpg" alt="house of koma">
+        <div class="event-info">
+          <h3 class="milker">House Of Koma</h3>
+          <p><strong>Date:</strong> December 29, 2025</p>
+          <p><strong>Venue:</strong> Adashe Garden Resort, Thamaga, Botswana</p>
         </div>
+      </a>
 
-        <p class="note">*This demo uses front-end purchase flow (no payment gateway). Replace with Stripe/PayPal when ready.</p>
-      </div>
-    </section>
-
-    <!-- Line-up -->
-    <section id="lineup" class="section lineup">
-      <div class="container">
-        <h2 class="section-title milker">Line-up</h2>
-        <p class="section-sub">Featured DJs & Performers</p>
-
-        <div class="artist-grid">
-          <!-- example artist card -->
-          <div class="card artist-card">
-            <img src="assets/images/tonie bacari.jpg" alt="tonie bacari" />
-            <div class="artist-info">
-              <h3 class="milker">Tonie Bacari</h3>
-              <p class="muted">Electro House</p>
-              <div class="artist-links">
-                <a href="#">Mix</a>
-                <a href="#">Instagram</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card artist-card">
-            <img src="assets/artist2.jpg" alt="Artist 2" />
-            <div class="artist-info">
-              <h3 class="milker">NiteRider</h3>
-              <p class="muted">Deep House</p>
-            </div>
-          </div>
-
-          <div class="card artist-card">
-            <img src="assets/artist3.jpg" alt="Artist 3" />
-            <div class="artist-info">
-              <h3 class="milker">StreetSoul</h3>
-              <p class="muted">Urban Beats</p>
-            </div>
-          </div>
-
+      <!-- Event 2 -->
+      <a href="event-2.html" class="card event-card">
+        <img src="assets/images/event2.jpg" alt="Sunset Sessions">
+        <div class="event-info">
+          <h3 class="milker">Luanshya Semester Shutdown</h3>
+          <p><strong>Date:</strong> November 29, 2025</p>
+          <p><strong>Venue:</strong> Bottoms Up, Luanshya, Zambia</p>
         </div>
-      </div>
-    </section>
+      </a>
 
+    </div>
+  </div>
+</section>
+    
     <!-- Gallery -->
     <section id="gallery" class="section gallery">
       <div class="container">
@@ -166,6 +158,14 @@ This will be the first edition,  first of its kind in kweneng district and  we a
             <p class="muted">To create Botswana’s most inspiring house music experience, a vibrant 
 gathering that unites people through rhythm, celebrates our cultural values, and redefines nightlife as clean, safe, and uplifting. We aspire to build a tradition where the energy of world-class house music blends seamlessly with the spirit of Botho, leaving a lasting mark on our community and the entertainment scene.</p>
           </div>
+
+	  <div>
+            <h3 class="milker">Our Mission</h3>
+            <p class="muted">To host a premier house music event that delivers an exceptional, safe, and 
+inclusive nightlife experience. Through top-class performances, impeccable organisation, and a commitment to cleanliness and respect, we aim to bring people together, showcase the richness of our culture, and set a new benchmark for responsible entertainment in 
+Botswana.</p>
+          </div>
+
           <div>
             <h3 class="milker">What to Expect</h3>
             <ul class="muted">
@@ -174,46 +174,6 @@ gathering that unites people through rhythm, celebrates our cultural values, and
               <li>Safe, curated event spaces</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact / Newsletter -->
-    <section id="contact" class="section contact">
-      <div class="container contact-inner">
-        <div class="contact-left">
-          <h2 class="section-title milker">Contact & Follow</h2>
-          <p class="muted">Find our email, phone and social handles below or use the contact form to email us directly.</p>
-
-          <ul class="contact-list muted">
-            <li><strong>Email:</strong> komasmainhouse@gmail.com</li>
-            <li><strong>Whatsapp:</strong> +267 73701330</li>
-          </ul>
-
-          <div class="socials">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-	    <a href="#">Tik tok</a>
-          </div>
-        </div>
-
-        <div class="contact-right">
-          <h3 class="milker">Send a message</h3>
-          <form id="contactForm" class="contact-form">
-            <input type="text" id="contactName" placeholder="Your name" required />
-            <input type="email" id="contactEmail" placeholder="Your email" required />
-            <textarea id="contactMessage" placeholder="Message" rows="5" required></textarea>
-            <button class="btn btn-primary" type="submit">Send Message</button>
-          </form>
-
-          <hr />
-
-          <h3 class="milker">Newsletter</h3>
-          <form id="newsletterForm" class="newsletter-form">
-            <input type="email" id="newsletterEmail" placeholder="Your email" required />
-            <button class="btn btn-outline" type="submit">Subscribe</button>
-          </form>
         </div>
       </div>
     </section>
@@ -233,17 +193,40 @@ gathering that unites people through rhythm, celebrates our cultural values, and
         </form>
 
         <form id="signupForm" class="auth-form hidden">
-          <input type="text" id="signupName" placeholder="Full name" required />
-          <input type="email" id="signupEmail" placeholder="Email" required />
-          <input type="password" id="signupPassword" placeholder="Password" required />
-          <div class="auth-actions">
-            <button class="btn btn-primary" type="submit">Sign up</button>
-            <button type="button" class="btn btn-ghost" id="showLogin">Already have an account</button>
-          </div>
-        </form>
+  <input type="text" id="signupFirstName" placeholder="First name" required />
+  <input type="text" id="signupLastName" placeholder="Last name" required />
+  <input type="text" id="signupUsername" placeholder="Choose a username" required />
+  <input type="date" id="signupDob" placeholder="Date of birth" required />
+  <input type="tel" id="signupPhone" placeholder="Phone number (e.g. +267...)" required />
+  <input type="email" id="signupEmail" placeholder="Email" required />
+  <input type="password" id="signupPassword" placeholder="Password" required />
+  <input type="password" id="signupPasswordConfirm" placeholder="Confirm password" required />
+  <div class="auth-actions">
+    <button class="btn btn-primary" type="submit">Sign up</button>
+    <button type="button" class="btn btn-ghost" id="showLogin">Already have an account</button>
+  </div>
+</form>
+
 
       </div>
     </div>
+<!-- Dashboard Section (hidden by default) -->
+<!-- Dashboard Overlay (keeps rest of site visible) -->
+<div id="dashboardOverlay" class="dashboard-overlay" style="display:none;">
+  <div class="dashboard-content">
+    <button id="closeDashboard" class="close-dashboard">×</button>
+    <h2 class="milker">Welcome, <span id="dashUserName"></span></h2>
+    <p class="muted" id="dashUserEmail"></p>
+
+    <h3 class="section-sub milker">Your Tickets</h3>
+    <div class="ticket-grid" id="dashTicketGrid"></div>
+
+    <h3 class="section-sub milker">Upcoming Events</h3>
+    <div class="events-grid" id="dashEventsGrid"></div>
+  </div>
+</div>
+
+<a href="#tickets" class="floating-ticket-btn">BUY A TICKET</a>
 
     <!-- Footer -->
     <footer class="footer">
@@ -257,7 +240,13 @@ gathering that unites people through rhythm, celebrates our cultural values, and
     </footer>
 
   </div>
+<!-- Load Supabase library FIRST -->
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
-  <script src="script.js"></script>
+<!-- Then load your own JavaScript -->
+<script src="script.js"></script>
+
+
+
 </body>
 </html>
